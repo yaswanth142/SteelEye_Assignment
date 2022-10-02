@@ -1,0 +1,62 @@
+### 1)Explain what the simple List component does.
+### 2)What problems / warnings are there with code?
+### 3)Please fix, optimize, and/or modify the component as much as you think is necessary.
+
+### Answer 
+
+### LISTS:
+
+->Lists are used to display data in an ordered format and mainly used to display menus on websites. 
+->In React, Lists can be created in a similar way as we create lists in JavaScript. 
+
+### List Compounent and Example:
+
+->In React, Lists can be created in a similar way as we create lists in JavaScript.
+-> Let us see how we transform Lists in regular JavaScript. 
+->The map() function is used for traversing the lists. 
+->In the below example, the map() function takes an array of numbers and multiply their values with 5.
+
+### Errors in Code:
+
+### Step1:
+
+### Error1:
+
+  onClick={()=>onClickHandler(index)}
+
+  OnClick is an functional Component ,so we can used the {()=>} Arrow Function
+
+### Error2:
+
+   index: PropTypes.number
+In this ,We are not added the index ,Index is used to taken the parent component and indentify the unique value and varables.
+Maping the indexes,we use the index on return function
+
+### Error3:
+
+  const [setSelectedIndex, SelectedIndex] = useState();
+
+  ->In the above code having error ,Because the error is in the the position of the data and setdata are interchanged so, 
+  ->we have to retify the error in the useState hook
+
+  const [selectedIndex, setSelectedIndex] = useState();
+
+### Error4:
+   
+   Use the arrayof instead of array and Shape instead of shapeof in the WrappedListComponent.propTypes 
+
+### Error5:
+  
+    We have to pass the data using props 
+
+WrappedListComponent.defaultProps = {
+  items: null,
+};
+
+After Retifying Error,
+
+WrappedListComponent.defaultProps = {
+  items: [{text:"yeswanth",index:1}],
+};
+
+
